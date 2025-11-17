@@ -44,7 +44,7 @@ Risk score combines:
 - ZXCVBN feedback  
 - Pattern highlights  
 
-- [Try it live on Render](https://threat-meter.onrender.com)
+[Try it live on Render](https://threat-meter.onrender.com)
 
 ---
 
