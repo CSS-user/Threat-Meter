@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Checker</h1>
+
+      <!-- Clear instructions for users -->
+      <div class="instructions">
+        <p><strong>How to use:</strong></p>
+        <ul style="margin-left: 15px">
+          <li>Type a password below to check its strength.</li>
+          <li>Your password is evaluated for complexity.</li>
+          <li>
+            We also check if this password has appeared in known data breaches
+            (HIBP).
+          </li>
+        </ul>
+        <p style="color: #60a5fa; margin-top: 10px">
+          No passwords are stored — only the first 5 characters of a SHA-1 hash
+          are sent to HIBP.
+        </p>
+      </div>
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Type password..."
+        autofocus
+      />
+
+      <div id="riskMeter"></div>
+
+      <div id="hibpStatus"></div>
+
+      <div id="output"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
